@@ -20,7 +20,7 @@ def leer_arboles(nombre_archivo):
 
 
 
-
+#6.10 descomentar linea 27 y comentar linea 48
 os.path.join('..', 'Data', 'arbolado-en-espacios-verdes.csv')
 arboleda = leer_arboles('../Data/arbolado-en-espacios-verdes.csv')
 altura_jacaranda = [(float(arbol['altura_tot'])) for arbol in arboleda if arbol['nombre_com'] == 'Jacarandá']
@@ -35,7 +35,7 @@ for arbol in arboleda if arbol['nombre_com'] == 'Jacarandá']
 print(medidas_jacaranda)
 
 
-
+#6.11 
 def scatter_hd(lista_de_pares):
     lista_de_pares=np.array(lista_de_pares)
     plt.scatter(lista_de_pares[:,0] , lista_de_pares[:,1] ,alpha=0.5, c='RED')
@@ -45,16 +45,16 @@ def scatter_hd(lista_de_pares):
     plt.title("Relación diámetro-alto para Jacarandás")
     plt.show()
         
-#scatter_hd(medidas_jacaranda)
+scatter_hd(medidas_jacaranda)
 
 
-def medidas_de_especies(especies, arboleda):
-    medidas = []
-    medidas.append([{e:(float(arbol['altura_tot']), int(arbol['diametro']))}for e in especies for arbol in arboleda if arbol['nombre_com'] == e])
-    return medidas
+# def medidas_de_especies(especies, arboleda):
+#     medidas = []
+#     medidas.append([{e:(float(arbol['altura_tot']), int(arbol['diametro']))}for e in especies for arbol in arboleda if arbol['nombre_com'] == e])
+#     return medidas
 
-os.path.join('..', 'Data', 'arbolado-en-espacios-verdes.csv')
-arboleda = leer_arboles('../Data/arbolado-en-espacios-verdes.csv')
-especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
-medidas = medidas_de_especies(especies, arboleda)
-scatter_hd(medidas)
+# os.path.join('..', 'Data', 'arbolado-en-espacios-verdes.csv')
+# arboleda = leer_arboles('../Data/arbolado-en-espacios-verdes.csv')
+# especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
+# medidas = medidas_de_especies(especies, arboleda)
+# scatter_hd(medidas)
