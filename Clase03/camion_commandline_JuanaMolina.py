@@ -12,6 +12,7 @@ def costo_camion(nombre_archivo):
     with open(nombre_archivo) as f:
         rows = csv.reader(f)
         headers = next(rows)
+        
         total = 0
         try:
             for row in rows:
